@@ -3,7 +3,7 @@
 #---------------------------------#
 
 # version format
-version: 1.0.1.{build}
+version: 1.0.2.{build}
 
 # branches to build
 branches:
@@ -13,9 +13,6 @@ branches:
 
 # Start builds on tags only (GitHub and BitBucket)
 skip_non_tags: true
-
-only_commits:
-  author: email@tomasbouda.cz
 
 # Do not build feature branch with open Pull Requests
 skip_branch_with_pr: true
@@ -83,12 +80,12 @@ deploy:
     # Deploying to NuGet feed
   - provider: NuGet
     api_key:
-      secure: IxlR/+bZG214/Em4LMd5QyQ87wCQNsYbIZoSgIRhBA0xZtYnMeTP0WeKsoFd+i4i
+      secure: /5jbFbbHaNXu+RNW5N98rSDc17E56fSgLcmCtnAYC0rVGpxbaqnNnNxVmAr6JEq4
     skip_symbols: false
 
     # Deploy to GitHub Releases
   - provider: GitHub
-    release: v1.0.1 #
+    release: v1.0.2 #
     description: init #
     artifact: /.*\.nupkg/           # upload all NuGet packages to release assets
     draft: false
