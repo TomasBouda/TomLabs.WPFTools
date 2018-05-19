@@ -3,7 +3,7 @@
 #---------------------------------#
 
 # version format
-version: 1.0.0.{build}
+version: 1.0.1.{build}
 
 # branches to build
 branches:
@@ -83,12 +83,12 @@ deploy:
     # Deploying to NuGet feed
   - provider: NuGet
     api_key:
-      secure: oy2ji6op6l7cnbgxmhyapetpts5pw2se5pfdjxitouahya
+      secure: IxlR/+bZG214/Em4LMd5QyQ87wCQNsYbIZoSgIRhBA0xZtYnMeTP0WeKsoFd+i4i
     skip_symbols: false
 
     # Deploy to GitHub Releases
   - provider: GitHub
-    release: v1.0.0 #
+    release: v1.0.1 #
     description: init #
     artifact: /.*\.nupkg/           # upload all NuGet packages to release assets
     draft: false
